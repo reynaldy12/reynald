@@ -1,0 +1,27 @@
+First, make sure that the router is connected to a TFTP Server, also a valid ISO file is there.
+
+During boot-up, press Ctrl+Break continuously so that the router goes into ROMMON mode.
+
+rommon 1 &amp;amp;amp;gt; IP_ADDRESS=172.16.1.1
+rommon 2 &amp;amp;amp;gt; IP_SUBNET_MASK=255.255.255.0
+rommon 3 &amp;amp;amp;gt; DEFAULT_GATEWAY=172.16.1.100
+rommon 4 &amp;amp;amp;gt; TFTP_SERVER=172.16.1.100
+rommon 5 &amp;amp;amp;gt; TFTP_FILE=C3640-Ix-Mz_20122-15_20T2.bin
+rommon 6 &amp;amp;amp;gt; tftpdnld -r
+
+IP_ADDRESS: 172.16.1.1
+IP_SUBNET_MASK: 255.255.254.0
+DEFAULT_GATEWAY: 172.16.1.100
+TFTP_SERVER: 172.16.1.100
+TFTP_FILE: C3640-Ix-Mz_20122-15_20T2.bin
+TFTP_VERBOSE: Progress
+TFTP_RETRY_COUNT: 18
+TFTP_TIMEOUT: 7200
+TFTP_CHECKSUM: Yes
+TFTP_MACADDR: XXX.XXX.XXX.XXX
+GE_PORT: Gigabit Ethernet 0
+GE_SPEED_MODE: Auto
+.
+Receiving C3640-Ix-Mz_20122-15_20T2.bin from 172.16.1.100
+...
+...
