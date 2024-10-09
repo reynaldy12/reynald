@@ -1,0 +1,18 @@
+basic 
+#server
+#client
+>iperf -c ip_server
+
+dengan spesifikasi port 
+
+#server
+>iperf -s -p 6400
+#client
+>iperf -c ip_server -p 6400
+
+dua arah (client)
+
+#dua arah sekaligus
+>iperf -c ip_server -d
+#dua arah satu persatu
+>iperf -c ip_server -r
