@@ -1,0 +1,57 @@
+router
+
+
+R1(config)#no cdp run
+R1(config)#no lldp run
+R1(config)#no router rip
+R1(config)#no router ospf
+R1(config)#no service pad
+R1(config)#no service tcp-small-servers
+R1(config)#no service udp-small-servers
+R1(config)#no ip http server
+R1(config)#no ip http secure-server
+R1(config)#no crypto pki trustpoint ********
+R1(config)#no ip bootp server
+R1(config)#no ip finger
+R1(config)#no service finger
+R1(config)#no boot network
+R1(config)#no service config
+R1(config)#no ip source-route
+
+R1(config)#service dhcp
+R1(config)#ip domain-lookup
+
+
+
+
+switch
+Switch>enable
+Switch#
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#interface FastEthernet0/2
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#interface FastEthernet0/1
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#interface FastEthernet0/4
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#interface FastEthernet0/6
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#interface FastEthernet0/8
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#interface FastEthernet0/9
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#interface FastEthernet0/11
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#interface FastEthernet0/12
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#interface FastEthernet0/14
+Switch(config-if)#
